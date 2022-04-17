@@ -636,6 +636,7 @@ img {
 }
 .follow {
   width: 206px;
+  padding-left: 70px;
 }
 
 .follow .list {
