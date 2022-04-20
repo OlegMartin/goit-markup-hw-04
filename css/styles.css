@@ -333,11 +333,6 @@ img {
 .social {
   margin-right: 10px;
 }
-/* .social:hover,
-.social:focus {
-  border-radius: 50%;
-  color: var(--primary-white-color);
-} */
 
 .social .link {
   width: 44px;
