@@ -155,9 +155,7 @@ img {
   margin-left: 50px;
 }
 .icon {
-  width: 20px;
-  height: 20px;
-  margin: 2px 10px 2px auto;
+  margin-right: 10px;
   fill: currentColor;
 }
 .icon:hover,
@@ -190,6 +188,9 @@ img {
 /* hero */
 
 .hero {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 200px 0;
   text-align: center;
 
@@ -266,40 +267,21 @@ img {
   margin-right: 30px;
 }
 .features-items {
-  padding: 30px 30px 30px 0;
+  margin-right: 30px;
 }
 .features-items:last-child {
-  padding-right: 0;
+  margin-right: 0;
 }
 
-.features-items::before {
-  display: block;
-  content: "";
-  height: 120px;
-  background-color: var(--background-color);
-  background-repeat: no-repeat;
-  background-position: center;
+.features-item-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
-}
-
-.icon-antenna::before {
-  background-image: url(../images/icons/antenna.svg);
-}
-
-.icon-clock::before {
-  background-image: url(../images/icons/clock.svg);
-}
-
-.icon-diagram::before {
-  background-image: url(../images/icons/diagram.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/icons/astronaut.svg);
-}
-
-.features .item:last-child {
-  margin: 0;
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
 }
 
 .features .tittle {
@@ -351,6 +333,11 @@ img {
 .social {
   margin-right: 10px;
 }
+/* .social:hover,
+.social:focus {
+  border-radius: 50%;
+  color: var(--primary-white-color);
+} */
 
 .social .link {
   width: 44px;
@@ -359,21 +346,25 @@ img {
   justify-content: center;
   align-items: center;
 }
-.icon-media {
-  color: var(--icon-color);
-  fill: currentColor;
+.social .link {
+  border-radius: 50%;
+  outline: none;
 }
-.icon-media:hover,
-.icon-media:focus {
-  color: #ffffff;
+.social .link:focus .icon-media {
+  fill: var(--primary-white-color);
 }
 
-.social-icon {
-  border-radius: 50%;
+.social .link:hover .icon-media {
+  fill: var(--primary-white-color);
 }
+
 .social .link:hover,
 .social .link:focus {
-  background-color: var(--accent-color);
+  background: var(--accent-color);
+}
+.icon-media {
+  color: var(--accent-color);
+  fill: var(--icon-color);
 }
 
 .team {
@@ -424,6 +415,10 @@ img {
 .action-clients {
   display: flex;
 }
+.clients {
+  margin-left: 30px;
+}
+
 .link-clients {
   color: var(--icon-color);
   align-items: center;
@@ -431,12 +426,12 @@ img {
   display: flex;
   width: 170px;
   height: 92px;
-  margin-left: 30px;
   border-radius: 4px;
   border: 1px solid var(--icon-color);
 }
 
-.link-clients:hover {
+.link-clients:hover,
+.link-clients:focus {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
@@ -470,21 +465,27 @@ img {
 
 .button.portfolio {
   display: flex;
-  border-radius: 4px;
+  background-color: var(--background-color);
 
   color: var(--primery-text-color);
-  background-color: #f5f4fa;
+  border-radius: 4px;
+  text-align: center;
+  font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  text-align: center;
   letter-spacing: 0.03em;
+  border: none;
+  padding: 6px 22px;
   cursor: pointer;
 }
+
 .button.portfolio:hover,
 .button.portfolio:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button-items {
@@ -498,6 +499,9 @@ img {
 /* portfolio */
 .features-item {
   padding: 30px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
 
 .features-tittle {
@@ -531,9 +535,24 @@ img {
 
 .flex-features {
   width: 370px;
-  border: 1px solid #eeeeee;
   margin-right: 30px;
   margin-bottom: 30px;
+}
+
+.flex-features a{
+  display: block;
+  text-decoration: none;
+  color: var(--tittle-text-color);
+}
+
+.flex-features a:hover,
+.flex-features a:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+  
+}
+
+
 }
 
 .flex-features:nth-last-child(-n + 3) {
@@ -550,11 +569,6 @@ img {
 
 .features-tittle {
   margin-bottom: 4px;
-}
-
-.flex-features:hover {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* footer */
@@ -594,6 +608,7 @@ img {
 .sec-address {
   width: 231px;
   margin-top: 20px;
+  font-style: normal;
 }
 
 .address-items {
@@ -665,6 +680,7 @@ img {
   height: 44px;
   background-color: #ffffff1a;
   border-radius: 50%;
+  outline: none;
 }
 
 .media-footer {
