@@ -539,7 +539,7 @@ img {
   margin-bottom: 30px;
 }
 
-.flex-features a{
+.flex-features a {
   display: block;
   text-decoration: none;
   color: var(--tittle-text-color);
@@ -547,12 +547,8 @@ img {
 
 .flex-features a:hover,
 .flex-features a:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-
-  
-}
-
-
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .flex-features:nth-last-child(-n + 3) {
@@ -561,10 +557,6 @@ img {
 
 .flex-features:nth-child(3n) {
   margin-right: 0;
-}
-
-.features-fotot {
-  display: block;
 }
 
 .features-tittle {
